@@ -36,22 +36,50 @@ namespace Splash_Project
 
           
             //Importing January Data CSV
-            var date = new List<string>();
-            var janID = new List<string>();
+            var janDates = new List<string>();
+            var janTransactions = new List<string>();
             var janAmount = new List<string>();
             using (var rd = new StreamReader(jan))
             {
                 while (!rd.EndOfStream)
                 {
                     var splits = rd.ReadLine().Split(',');
-                    date.Add(splits[0]);
-                    janID.Add(splits[1]);
+                    janDates.Add(splits[0]);
+                    janTransactions.Add(splits[1]);
                     janAmount.Add(splits[2]);
                 }
             }
 
-            int janIDCounter = 0;
+            //Importing February Data CSV
+            var febDates = new List<string>();
+            var febTransactions = new List<string>();
+            var febAmount = new List<string>();
+            using (var rd = new StreamReader(feb))
+            {
+                while (!rd.EndOfStream)
+                {
+                    var splits = rd.ReadLine().Split(',');
+                    febDates.Add(splits[0]);
+                    janTransactions.Add(splits[1]);
+                    janAmount.Add(splits[2]);
+                }
+            }
 
+            //Importing March Data CSV
+            var marDates = new List<string>();
+            var marTransactions = new List<string>();
+            var marAmount = new List<string>();
+            using (var rd = new StreamReader(mar))
+            {
+                while (!rd.EndOfStream)
+                {
+                    var splits = rd.ReadLine().Split(',');
+                    febDates.Add(splits[0]);
+                    janTransactions.Add(splits[1]);
+                    janAmount.Add(splits[2]);
+                }
+            }
+           
 
 
             /*
@@ -67,12 +95,12 @@ namespace Splash_Project
 
             // Print User Info
             Console.WriteLine("Column 1:");
-            foreach (var element in date)
+            foreach (var element in janDates)
                 Console.WriteLine(element);
 
             // Print Amount
             Console.WriteLine("Column 2:");
-            foreach (var element in janID)
+            foreach (var element in janTransactions)
                 Console.WriteLine(element);
 
             // Print Program
