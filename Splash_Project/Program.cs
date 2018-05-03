@@ -12,17 +12,12 @@ namespace Splash_Project
     {
         static void Main(string[] args)
         {
-            //Variables to hold filepath to CSV
-            string startingData;
-            string jan;
-            string feb;
-            string mar;
-
+            
             //Assign filepath to variables
-            startingData = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\StartingData.csv";
-            jan = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\Jan.csv";
-            feb = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\Feb.csv";
-            mar = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\Mar.csv";
+            string startingData = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\StartingData.csv";
+            string jan = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\Jan.csv";
+            string feb = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\Feb.csv";
+            string mar = @"C:\Users\Dan\Documents\Visual Studio 2015\Projects\Splash_Project\Splash_Project\CSV\Mar.csv";
 
             //Importing StartingData CSV and separating into separate lists
             var userID = new List<string>();
@@ -39,24 +34,8 @@ namespace Splash_Project
                 }
             }
 
-            /*
-            // Print User Info
-            Console.WriteLine("Column 1:");
-            foreach (var element in userID)
-                Console.WriteLine(element);
-
-            // Print Amount
-            Console.WriteLine("Column 2:");
-            foreach (var element in amount)
-                Console.WriteLine(element);
-
-            // Print Program
-            Console.WriteLine("Column 3:");
-            foreach (var element in program)
-                Console.WriteLine(element);
-            */
-
-            //January Data Set
+          
+            //Importing January Data CSV
             var date = new List<string>();
             var janID = new List<string>();
             var janAmount = new List<string>();
@@ -70,6 +49,22 @@ namespace Splash_Project
                     janAmount.Add(splits[2]);
                 }
             }
+
+            int janIDCounter = 0;
+
+
+
+            /*
+            Information about program 1:
+   -Can avoid paying a $8 penalty per month if one of the following criteria is met:
+        -deposited at least 300 per month
+        -has at least 5 transactions per month
+       - has at least 1200 in their account by the end of the month
+       */
+        
+            
+
+
             // Print User Info
             Console.WriteLine("Column 1:");
             foreach (var element in date)
